@@ -54,6 +54,43 @@ int main(){
 
     }while(opcao != 6);
     
+    
+
+    return 0;
+}
+Clara-
+    #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+typedef struct{
+    int codigo;
+    char nome[30];
+    float preco;
+}Produto;
+
+typedef struct{
+    Produto Produto;
+    int quantidade;
+}Carrinho;
+
+
+void listarProdutos(Produto produto[],int tamanho){
+    printf("Produtos disponiveis:\n");
+    for(int i=0; i<tamanho;i++){
+        printf("%d, %s (R$ %.2f)", produto[i].codigo, produto[i].nome, produto[i].preco);
+    }
+}
+    
+    
+  int main() {
+    Produto produto[50]; 
+
+    for (int i = 0; i < 50; i++) { 
+        strcpy(produto[i].nome, "arroz"); 
+        produto[i].codigo = 56;
+        produto[i].preco = 10.0;
+    }
 
     return 0;
 }
