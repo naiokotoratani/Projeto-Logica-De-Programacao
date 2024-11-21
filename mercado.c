@@ -16,14 +16,11 @@ int cadastrarProduto(Produto produto[], int tamanhoProduto){
     }
     return produtosCadastrados + 1;
 }
-int pegarProdutoPorCodigo(int codigo, Produto produtos[], int tam) {
-    for(int i = 0; i < tam; i++) {
-        if(produtos[i].codigo == codigo) {
-            return i;
-        }
+void listarProdutos(Produto produto[],int tamanho){
+    printf("Produtos disponiveis:\n");
+    for(int i=0; i<tamanho;i++){
+        printf("%d, %s (R$ %.2f)", produto[i].codigo, produto[i].nome, produto[i].preco);
     }
-    printf("Produto não encontrado.\n");
-    return -1; 
 }
 
 int main(){
@@ -66,3 +63,15 @@ int main(){
 
     return 0;
 }
+
+
+
+void listarProdutos(Produto produto[],int tamanho){
+    printf("Produtos disponiveis:\n");
+    for(int i=0; i<tamanho;i++){
+        printf("%d, %s (R$ %.2f)", produto[i].codigo, produto[i].nome, produto[i].preco);
+    }
+}
+    
+    
+ 
