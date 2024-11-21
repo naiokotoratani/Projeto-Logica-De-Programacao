@@ -16,6 +16,15 @@ int cadastrarProduto(Produto produto[], int tamanhoProduto){
     }
     return produtosCadastrados + 1;
 }
+int pegarProdutoPorCodigo(int codigo, Produto produtos[], int tam) {
+    for(int i = 0; i < tam; i++) {
+        if(produtos[i].codigo == codigo) {
+            return i;
+        }
+    }
+    printf("Produto não encontrado.\n");
+    return -1; 
+}
 
 int main(){
 
